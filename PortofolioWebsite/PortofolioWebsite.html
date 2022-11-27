@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil | Andaru Pratama</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var words = ['Halo!', 'Nama saya Andaru Pratama', 'Website ini berisi profil saya', 'Yuk scroll lebih lanjut!'],
+            part,
+            i = 0,
+            offset = 0,
+            len = words.length,
+            forwards = true,
+            skip_count = 0,
+            skip_delay = 15,
+            speed = 70;
+        var wordflick = function () {
+            setInterval(function () {
+                if (forwards) {
+                    if (offset >= words[i].length) {
+                        ++skip_count;
+                        if (skip_count == skip_delay) {
+                            forwards = false;
+                            skip_count = 0;
+                        }
+                    }
+                }
+                else {
+                    if (offset == 0) {
+                        forwards = true;
+                        i++;
+                        offset = 0;
+                        if (i >= len) {
+                            i = 0;
+                        }
+                    }
+                }
+                part = words[i].substr(0, offset);
+                if (skip_count == 0) {
+                    if (forwards) {
+                        offset++;
+                    }
+                    else {
+                        offset--;
+                    }
+                }
+                $('.word').text(part);
+            }, speed);
+        };
+
+        $(document).ready(function () {
+            wordflick();
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-2.5 fixed-top ">
+        <div class="container">
+            <img src="foto2.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span> <i id="bar" class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#biodata">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kegiatan1">Kegiatan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nilaiaq">Nilai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyek">Proyek</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container-fluid">
+            <h1 style="margin-left: 38px;">Selamat Datang!</h1>
+            <h1 style="margin-left: 30px;"> &nbsp;<span class="word"
+                    style="color: whitesmoke; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"></span>
+            </h1>
+        </div>
+    </section>
+
+    <section id="produk">
+        <div class="container text-center m-6 py-5">
+            <h1><span id="biodata">PROFIL SAYA</span></h1>
+        </div>
+
+        <div id="fotoaq" class="w-100 container-fluid">
+            <div class="row p-0 m-0">
+                <div class="col-5" style="margin-left: 40px;">
+                    <img class="img-fluid" src="foto.png" alt="">
+                </div>
+                <div class="col-5 container-fluid d-flex" style=" align-items: center; margin-right: 150px;">
+                    <p style="text-align: justify;">Halo! Perkenalkan nama saya <span>Andaru Pratama Putra.</span> saya merupakan mahasiswa SI ITS semester 3. Saya lahir di
+                        <span>Pasuruan</span> pada tanggal <span>13 Januari 2003</span>. Hobi saya adalah <span>membaca buku</span>.
+                        Saya sangat menyukai <span>soto ayam serta bubur ayam</span>. Dalam website ini, saya akan memberitahu tentang kegiatan yang saya lakukan selama 3 bulan terakhir,
+                        nilai saya selama 2 semester kebelakang, serta proyek html buatan saya selama menjalani kelas Pemrograman Web C. Selamat membaca!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kegiatan1" style="margin-bottom: 40px;">
+        <div class="container text-center m-6 py-5" style="margin-top: 43px;">
+            <h1><span id="biodata">KEGIATAN SAYA</span></h1>
+        </div>
+        <div class="container-fluid">
+            <div class="w-100 ">
+                <div class="row p-0 m-0">
+                    <div class="col-5 container-fluid d-flex"
+                        style="text-align: justify; align-items: center; justify-content: center; margin-left: 100px;">
+                        <p>Saya merupakan anak magang dari HMSI (Himpunan Mahasiswa Sistem Informasi) divisi Socdev atau
+                            Social Development. Disini saya banyak mendapat kenalan baru serta dapat mengetahui seluk
+                            beluk kegiatan divisi Social Development beserta program kerjanya.</p>
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid"
+                            style="width: 460px; border-radius: 30px; margin-top: 15px; margin-bottom: 80px;"
+                            src="MAGANG.jpg" id="magang">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100">
+                <div class="row p-0 m-0">
+                    <div class="col-6">
+                        <img class="img-fluid"
+                            style="width: 460px; border-radius: 30px; margin-top: 15px; margin-bottom: 80px;  margin-left: 110px;"
+                            src="OPR.jpg" id="">
+                    </div>
+                    <div class="col-5 container-fluid d-flex"
+                        style="text-align: justify; align-items: center; justify-content: center; margin-right: 100px;">
+                        <p>Saya juga merupakan staf di acara Information System Expo! 2022 sebagai staf divisi
+                            Operasional. Disini saya bertugas mengoperasikan zoom serta menjalankan teknis livestreaming
+                            acara ke Youtube menggunakan software OBS Studio. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100">
+                <div class="row p-0 m-0">
+                    <div class="col-5 container-fluid d-flex"
+                        style="text-align: justify; align-items: center; justify-content: center; margin-left: 100px;">
+                        <p>Lalu, saya juga mengikuti sebuah acara bernama SIMETRI yaitu Sistem Informasi Mengajar
+                            Teknologi Informasi. Saya sebagai volunteer pengajar, bertugas untuk menyampaikan sebuah
+                            materi seputar html, css, serta bootstrap kepada adik-adik SMA/SMK domisili Surabaya.</p>
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid"
+                            style="width: 460px; border-radius: 30px; margin-top: 15px; margin-bottom: 80px"
+                            src="SIMETRI.JPG" id="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <section id="banner" class="">
+
+    </section>
+
+    <section id="nilaiaq" class="my-1 pb-1">
+        <div class="container text-center py-4" style="margin-top: 32px;">
+            <h2>NILAI</h2>
+        </div>
+        <div class="row mx-auto container-fluid">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title" style="text-align: center;">Gasal</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Matkul</th>
+                                        <th>SKS</th>
+                                        <th>Nilai</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Logika & Struktur Diskrit</td>
+                                        <td>2</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Konsep SI</td>
+                                        <td>2</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Matematika 1</td>
+                                        <td>3</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Fisika 1</td>
+                                        <td>4</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Kimia 1</td>
+                                        <td>3</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Pancasila</td>
+                                        <td>2</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Bahasa Indonesia</td>
+                                        <td>2</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>IPS / Indeks Prestasi Sementara</td>
+                                        <td>&nbsp;</td>
+                                        <td><span>3.81</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title" style="text-align: center;">Genap</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Matkul</th>
+                                        <th>SKS</th>
+                                        <th>Nilai</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Algoritma Pemrograman</td>
+                                        <td>3</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Organisasi dan Fungsional Bisnis</td>
+                                        <td>3</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Statistika</td>
+                                        <td>3</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Matematika 2</td>
+                                        <td>3</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Fisika 2</td>
+                                        <td>3</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Agama Islam</td>
+                                        <td>2</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Kewarganegaraan</td>
+                                        <td>2</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Bahasa Inggris</td>
+                                        <td>2</td>
+                                        <td>AB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>IPS / Indeks Prestasi Sementara</td>
+                                        <td>&nbsp;</td>
+                                        <td><span>3.68</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="proyek" class="my-1 pb-1">
+        <div class="container text-center mt-5 py-3 ">
+            <h2>PROYEK SAYA</h2>
+        </div>
+        <div class="row mx-auto container-fluid py-3">
+            <div class="col-4">
+                <div class="card" id="card1">
+                    <img class="card-img-top" src="gbrproyek12.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Berita Sapuangin</h4>
+                        <p class="card-text">Saya diajari cara membuat layout yang mirip dengan laman berita ITS tentang
+                            sapuangin</p>
+                        <a href="Newfolder/sapuangin.html" class="btn btn-dark" target="_blank">Lihat
+                            Proyek</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" id="card1">
+                    <img class="card-img-top" src="gbrproyek3.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Landing Page Testimoni</h4>
+                        <p class="card-text">Disini, saya membuat sebuah laman web berisi testimoni/komentar dari
+                            orang-orang terkenal</p>
+                        <a href="Newfolder/tugaslandingpage.html" class="btn btn-dark" target="_blank">Lihat Proyek</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" id="card1">
+                    <img class="card-img-top" src="gbrproyek4.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Menghitung dengan Javascript</h4>
+                        <p class="card-text">Saya membuat suatu fungsi matematika dalam bahasa Javascript lalu
+                            menerapkannya dalam laman web html</p>
+                        <a href="Newfolder/js2.html" class="btn btn-dark" target="_blank">Lihat
+                            Proyek</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mx-auto container-fluid py-3">
+            <div class="col-4">
+                <div class="card" id="card1">
+                    <img class="card-img-top" src="gbrproyek5.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Latihan Javascript</h4>
+                        <p class="card-text">Saya ditugaskan untuk mengubah bahasa java kedalam bahasa javascript.
+                            Disini saya mengubah bahasa yang memiliki kegunaan untuk mencari faktor dari sebuah angka
+                        </p>
+                        <a href="Newfolder/TUGAS JAVASCRIPT.html" class="btn btn-dark" target="_blank">Lihat Proyek</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" id="card1">
+                    <img class="card-img-top" src="gbrproyek6.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Membuat form</h4>
+                        <p class="card-text">Saya diajari untuk membuat form dalam html menggunakan bootstrap, beserta
+                            dengan fitur disable</p>
+                        <a href="Newfolder/cart2.html" class="btn btn-dark" target="_blank">Lihat
+                            Proyek</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" id="card1">
+                    <img class="card-img-top" src="gbrproyek7.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Latihan form</h4>
+                        <p class="card-text">Saya ditugaskan untuk membuat laman web yang mirip dengan contoh, dimana
+                            harus menggunakan bootstrap custom forms radio button beserta fitur disable</p>
+                        <a href="Newfolder/cart3.html" class="btn btn-dark" target="_blank">Lihat
+                            Proyek</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mx-auto container-fluid py-3">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <div class="card" id="card1">
+                    <img class="card-img-top" src="gbrproyekvalidasi.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Validasi form</h4>
+                        <p class="card-text">Saya belajar tentang bagaimana cara membuat fungsi yang memvalidasi input
+                            dari sebuah form</p>
+                        <a href="Newfolder/validasinohpdanemail.html" class="btn btn-dark" target="_blank">Lihat
+                            Proyek</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="mt-5 py-4 d-flex">
+        <div class="container" style="padding: 0px 84px;">
+            <p style="text-align: center; font-size: 21px; color: white; margin: 28px auto;">Hubungi Saya</p>
+            <div class="d-flex" style="justify-content: center; ">
+
+                <a href="https://github.com/AndaruPratama"><img src="github.png"
+                        style="width: 50px; margin-left: 15px; margin-right: 15px;" alt=""></a>
+                <a href="https://www.linkedin.com/in/andaru-pratama-a627a921a/"><img src="linkedin.png"
+                        style="width: 50px; margin-left: 15px; margin-right: 15px;" alt=""></a>
+                <a href="https://www.instagram.com/andaru.pratama15/"><img src="instagram.png"
+                        style="width: 50px; margin-left: 15px; margin-right: 15px;" alt=""></a>
+                <a href="https://www.youtube.com/channel/UC-9WY85p8yggCpmkfjDYbaQ"><img src="youtube.png"
+                        style="width: 50px; margin-left: 15px; margin-right: 15px;" alt=""></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

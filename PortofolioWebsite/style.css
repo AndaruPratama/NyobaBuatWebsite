@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+html ::-webkit-scrollbar {
+    display: none;
+
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 97px;
+    overflow-x: hidden;
+}
+
+nav img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+#fotoaq img {
+    width: 300px;
+    border-radius: 30px;
+    margin-left: 40%;
+}
+
+
+* {
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: black;
+}
+
+h6 {
+    color: #8d8d8d;
+    ;
+}
+
+hr {
+    width: 30px;
+    height: 2px;
+    background-color: coral;
+}
+
+span{
+    font-weight: bold;
+}
+button {
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: darkslategray;
+    color: aliceblue;
+    padding: 13px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+@media only screen and (max-width: 991px) {
+
+    #navbarSupportedContent>ul {
+
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    #navbarSupportedContent>ul>li:nth-child(n)>a {
+        padding: 10px 0px;
+    }
+
+}
+
+button:hover {
+    background-color: cornflowerblue;
+}
+
+.card {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    font-size: 17px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+
+    padding: 0px 17px;
+    color: black;
+    transition: 0.3 ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar i.active {
+    color: cornflowerblue;
+}
+
+.navbar i {
+
+    font-size: 1.2rem;
+    padding: 0px 9px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+
+}
+
+
+#bar {
+
+    font-size: 1.5rem;
+    padding: 7px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+    color: black;
+
+}
+
+#bar:hover,
+#bar.active {
+    color: #ffff;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+#home {
+    background-image: url("AYG1.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: top 50px center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home span {
+    color: black;
+}
+
+#new .one img {
+    width: 100%;
+    height: 100x;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#new .one .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+#new .one:hover .details {
+    cursor: pointer;
+    background-color: rgba(188, 231, 231, 0.767);
+}
+
+#banner {
+    background-image: url("background2.jpg");
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: top -20px center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#banner h2 {
+    color: whitesmoke;
+}
+
+#banner h1 {
+    color: white;
+}
+
+#list {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+footer h5 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer h6 {
+    color: whitesmoke;
+}
+
+footer p {
+    color: white;
+}
